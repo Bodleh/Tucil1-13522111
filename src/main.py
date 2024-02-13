@@ -5,8 +5,8 @@ def file_input(lines):
     def is_valid_matrix(rows, cols):
         row_count = 0
         for line in lines[2:2 + rows]:
-            element = line.strip().split()
-            if (len(element) != cols) or (any(len(element) != 2 for element in element)):
+            elements = line.strip().split()
+            if (len(elements) != cols) or (any(len(item) != 2 for item in elements)):
                 return False
             row_count += 1
         
